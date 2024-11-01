@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Environment / secrets
+.env
+*.env
+kaggle.json
+
+# Dataset and build artifacts (downloaded or generated locally)
+db/
+docs/
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/

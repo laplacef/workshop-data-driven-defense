@@ -1,0 +1,32 @@
+[project]
+name = "data-driven-defense"
+version = "1.0.0"
+description = "Workshop materials on applying machine learning to network traffic analysis for intrusion detection (Edge-IIoTset)."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = "CC-BY-NC-SA-4.0"
+license-files = ["LICENSE.md"]
+authors = [{ name = "Francisco Laplace", url = "https://laplacef.me" }]
+keywords = [
+    "machine-learning",
+    "intrusion-detection",
+    "network-security",
+    "edge-iiotset",
+    "cybersecurity",
+]
+
+dependencies = [
+    "dask[dataframe]==2024.10.0",
+    "ipykernel==6.29.5",
+    "jupyterlab>=4.2,<5",
+    "kaggle==2.2.2",
+    "matplotlib==3.9.2",
+    "numpy==2.1.2",
+    "pandas==2.2.3",
+    "scikit-learn==1.5.2",
+    "sqlalchemy==2.0.36",
+    "tqdm==4.66.5",
+]
+
+[tool.uv]
+package = false
