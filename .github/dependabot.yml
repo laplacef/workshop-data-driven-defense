@@ -1,0 +1,25 @@
+version: 2
+
+# Weekly grouped version updates, on top of the advisory-driven security
+# updates. Cooldown holds new releases a few days; security updates bypass it.
+# No auto-merge: the gated pattern waits on a required status check, and this
+# repo has no CI, so a merged bump would land unverified.
+updates:
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      python-minor-patch:
+        update-types:
+          - minor
+          - patch
+    cooldown:
+      default-days: 5
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
+    open-pull-requests-limit: 5
