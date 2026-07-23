@@ -25,4 +25,7 @@ jobs:
       # No test suite in this workshop, so the gate verifies the dependency set
       # resolves, installs, and imports together. That catches a bump which
       # breaks the stack, such as a major that drops a symbol used at import.
-      - run: uv run python -c "import pandas, dask.dataframe, numpy, sklearn, matplotlib, sqlalchemy, tqdm, kaggle; import src.database, src.dataset"
+      # kaggle authenticates against its API at import, so it cannot be imported
+      # without credentials; uv sync above still install-verifies it, and
+      # src.dataset is skipped for the same reason (it imports kaggle).
+      - run: uv run python -c "import pandas, dask.dataframe, numpy, sklearn, matplotlib, sqlalchemy, tqdm; import src.database"
