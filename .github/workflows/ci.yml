@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python }}
+      # --locked fails if pyproject.toml and uv.lock have drifted, so a bump
+      # that updates one but not the other is caught here rather than merged.
+      - run: uv sync --locked
+      # No test suite in this workshop, so the gate verifies the dependency set
+      # resolves, installs, and imports together. That catches a bump which
+      # breaks the stack, such as a major that drops a symbol used at import.
+      - run: uv run python -c "import pandas, dask.dataframe, numpy, sklearn, matplotlib, sqlalchemy, tqdm, kaggle; import src.database, src.dataset"
