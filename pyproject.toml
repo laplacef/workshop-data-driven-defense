@@ -16,7 +16,7 @@ keywords = [
 ]
 
 dependencies = [
-    "dask[dataframe]==2024.10.0",
+    "dask[dataframe]==2026.7.0",
     "ipykernel==7.3.0",
     "jupyterlab>=4.6.2,<5",
     "kaggle==2.2.4",

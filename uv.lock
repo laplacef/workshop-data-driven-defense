@@ -315,7 +315,7 @@ wheels = [
 
 [[package]]
 name = "dask"
-version = "2024.10.0"
+version = "2026.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -326,30 +326,16 @@ dependencies = [
     { name = "pyyaml" },
     { name = "toolz" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/eb/38/10d4e3c5625b118c5a3b3066bb8bd473cc211434a4486c0ea5d93bc575be/dask-2024.10.0.tar.gz", hash = "sha256:dfd3efec5d8d8340fb647d0347637133030cad261b714623cc27de286e9db037", size = 10154629, upload-time = "2024-10-17T09:13:42.277Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4d/b5/aa50877159f1efd65a744107e0662a15d2b80fa0c427d980313367f49493/dask-2026.7.0.tar.gz", hash = "sha256:b039970642ce97a063070bae2763dada8aae27e3cbd8ff6d894072f920a1e252", size = 11548914, upload-time = "2026-07-06T16:58:36.496Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/ec/0fa1997dd7070a336063663a1305e6967b7c906bd7907f2435c5ad049b0e/dask-2024.10.0-py3-none-any.whl", hash = "sha256:1ddc27c7967e134b4f8296a488521485a5ac4927cc63e2abfa0b24227b93217f", size = 1259489, upload-time = "2024-10-17T09:13:37.954Z" },
+    { url = "https://files.pythonhosted.org/packages/90/aa/ceeb81d9dc886d445416310f0eff5c3978f20224b4143e96e36b7e85b011/dask-2026.7.0-py3-none-any.whl", hash = "sha256:68def8b467529ab8425ef9fcc6735dcaefaaf715d5e19ae219485f99a394dbef", size = 1496878, upload-time = "2026-07-06T16:58:34.597Z" },
 ]
 
 [package.optional-dependencies]
 dataframe = [
-    { name = "dask-expr" },
     { name = "numpy" },
     { name = "pandas" },
-]
-
-[[package]]
-name = "dask-expr"
-version = "1.1.16"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "dask" },
-    { name = "pandas" },
     { name = "pyarrow" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/1d/f0/abf573da693ae238abf48a11e50381e20945ab01a0cbdb31413b0894424b/dask_expr-1.1.16.tar.gz", hash = "sha256:9dd26886f270f373380b38dd2d41ce4321b2724e0814ea5043272cebf7f1b6bb", size = 222637, upload-time = "2024-10-17T09:15:35.734Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/a4/3bcbbc7d57d81ffb820b2330d35167e3f4361f1e5691fe38234c50de1bf2/dask_expr-1.1.16-py3-none-any.whl", hash = "sha256:dec098f940eca939700edf93fc0cdb0e820dcd6ba9780b0036fd965ebc7e813c", size = 243219, upload-time = "2024-10-17T09:15:32.448Z" },
 ]
 
 [[package]]
@@ -371,7 +357,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dask", extras = ["dataframe"], specifier = "==2024.10.0" },
+    { name = "dask", extras = ["dataframe"], specifier = "==2026.7.0" },
     { name = "ipykernel", specifier = "==7.3.0" },
     { name = "jupyterlab", specifier = ">=4.6.2,<5" },
     { name = "kaggle", specifier = "==2.2.4" },
