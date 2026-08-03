@@ -22,7 +22,7 @@ dependencies = [
     "kaggle==2.2.4",
     "matplotlib==3.11.1",
     "numpy==2.5.1",
-    "pandas==2.2.3",
+    "pandas==3.0.3",
     "scikit-learn==1.9.0",
     "sqlalchemy==2.0.51",
     "tqdm==4.70.0",
