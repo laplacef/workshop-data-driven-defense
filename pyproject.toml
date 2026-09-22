@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12,<3.14"
 license = "CC-BY-NC-SA-4.0"
 license-files = ["LICENSE.md"]
-authors = [{ name = "Francisco Laplace", url = "https://laplacef.me" }]
+authors = [{ name = "Francisco Laplace" }]
 keywords = [
     "machine-learning",
     "intrusion-detection",
@@ -27,6 +27,9 @@ dependencies = [
     "sqlalchemy==2.0.54",
     "tqdm==4.70.1",
 ]
+
+[project.urls]
+Author = "https://laplacef.me"
 
 [tool.uv]
 package = false
