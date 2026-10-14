@@ -17,14 +17,14 @@ keywords = [
 
 dependencies = [
     "dask[dataframe]==2026.8.0",
-    "ipykernel==7.3.0",
+    "ipykernel==7.4.0",
     "jupyterlab>=4.6.3,<5",
     "kaggle==2.2.4",
     "matplotlib==3.11.2",
-    "numpy==2.5.3",
+    "numpy==2.5.4",
     "pandas==3.0.6",
     "scikit-learn==1.9.1",
-    "sqlalchemy==2.1.1",
+    "sqlalchemy==2.1.4",
     "tqdm==4.70.1",
 ]
 
